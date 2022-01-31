@@ -42,8 +42,8 @@
         z-index:999999;
       }
       .real-big img {
-        width:100%;
-        height:100%;
+        width:50%;
+        height:50%;
       }
     </style>	
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -52,7 +52,7 @@
         var keys = [];
         var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
-        $("#monster-container").hide();
+        $("#corgo").hide();
 
         $(document).keydown(function(keyEvent) {
           keys.push(keyEvent.keyCode);
@@ -60,7 +60,7 @@
           if ( keys.length > code.length ) { keys.shift(); }
 
           if ( keys.toString() == code.toString() ) {
-            $('#monster-container').slideDown('slow');
+            $('#corgo').slideDown('slow');
           }
         });
       });
@@ -78,8 +78,8 @@
 	</tr>
 </table>
 <br><hr>
-<div id="monster-container" class="real-big">
-      <img src="cookie_monster.gif" >
+<div id="corgo" class="real-big">
+      <img src="corg.gif" >
     </div>	
 	<a style="color:#F4FF70;" href="https://steamcommunity.com/id/MicroKORGI/">My Steam page</a>
 <br><br>
