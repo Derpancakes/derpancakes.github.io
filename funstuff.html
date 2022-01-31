@@ -52,6 +52,22 @@
 	<a style="color:#F4FF70;" href="https://koalastothemax.com/">Koalas to the Max</a>
 <br><br>
 	<a style="color:#F4FF70;" href="https://www.mecabricks.com/en/user/microkorgi/">Some of my Lego synths</a>
+		<script>
+			const pressed = [];
+			const secretCode = 'ArrowUphiArrowDown';
+
+			window.addEventListener('keyup', (e) => {
+   			 console.log(e.key);
+   			 pressed.push(e.key);
+			    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+ 			   if(pressed.join('').includes(secretCode)) {
+   			     console.log("<meta http-equiv="refresh" content="0; url='https://www.w3docs.com'" />");
+ 			   }
+
+ 			   console.log(pressed);
+			})
+			</script>
 </body>
 </html>
 
