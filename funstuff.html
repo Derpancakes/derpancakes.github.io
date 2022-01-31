@@ -34,6 +34,37 @@
             cursor: url('wii2.cur'),auto;
         }
 </style>
+<style type="text/css">
+      .real-big {
+        position: absolute;
+        width:100%;
+        height:100%;
+        z-index:999999;
+      }
+      .real-big img {
+        width:100%;
+        height:100%;
+      }
+    </style>	
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var keys = [];
+        var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+
+        $("#monster-container").hide();
+
+        $(document).keydown(function(keyEvent) {
+          keys.push(keyEvent.keyCode);
+
+          if ( keys.length > code.length ) { keys.shift(); }
+
+          if ( keys.toString() == code.toString() ) {
+            $('#monster-container').slideDown('slow');
+          }
+        });
+      });
+    </script>
 </head>
 <body>
 <h1>Home of TransistorBased</h1>
@@ -52,6 +83,9 @@
 	<a style="color:#F4FF70;" href="https://koalastothemax.com/">Koalas to the Max</a>
 <br><br>
 	<a style="color:#F4FF70;" href="https://www.mecabricks.com/en/user/microkorgi/">Some of my Lego synths</a>
+	<div id="monster-container" class="real-big">
+      <img src="images/cookie_monster.gif" >
+    </div>
 </body>
 </html>
 
